@@ -1,0 +1,99 @@
+.navbar {
+  width: 100%;
+  background: royalblue;
+
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    @media (max-width: 1480px) {
+      max-width: 1220px;
+    }
+
+    @media (max-width: 1255px) {
+      max-width: 1000px;
+    }
+
+    @media (max-width: 1045px) {
+      max-width: 855px;
+    }
+
+    @media (max-width: 890px) {
+      max-width: 700px;
+    }
+
+
+    .logo {
+
+      svg {
+        width: 50px;
+        height: 50px;
+        color: white;
+      }
+    }
+
+    .navigation {
+
+      @media (max-width: 769px) {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        gap: 1rem;
+
+        li {
+          text-transform: uppercase;
+          color: white;
+        }
+      }
+    }
+
+    .lang {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      @media (max-width: 769px) {
+        display: none;
+      }
+
+      li {
+        color: white;
+      }
+    }
+
+    .burger {
+      display: none;
+
+      @media (max-width: 769px) {
+        display: block;
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+        color: white;
+      }
+    }
+
+    .dropdown{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: -100%;
+      transition: .3s;
+
+      &.active{
+        top: 0;
+      }
+    }
+
+
+  }
+}
